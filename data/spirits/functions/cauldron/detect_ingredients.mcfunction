@@ -4,3 +4,4 @@ execute if entity @e[type=item,nbt={Item:{id:"minecraft:apple"}},distance=..1] u
 execute if entity @e[type=item,nbt={Item:{id:"minecraft:wheat"}},distance=..1] unless entity @s[tag=spirits.Wheat] run function spirits:ingredients/wheat
 execute if entity @e[type=item,nbt={Item:{id:"minecraft:wheat_seeds"}},distance=..1] unless entity @s[tag=spirits.WheatSeeds] run function spirits:ingredients/wheat_seeds
 execute if entity @e[type=item,nbt={Item:{id:"minecraft:suspicious_stew",tag:{Wort:1b}}},distance=..1] unless entity @s[tag=spirits.Wort] run function spirits:ingredients/wort
+execute if entity @e[type=item,nbt={Item:{id:"minecraft:suspicious_stew",tag:{BurntMash:1b}}},distance=..1] unless entity @s[tag=spirits.Wort] run function spirits:ingredients/burnt_mash
