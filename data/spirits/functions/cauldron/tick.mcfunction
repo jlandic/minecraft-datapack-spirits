@@ -6,6 +6,7 @@ execute as @s at @s unless block ~ ~ ~ minecraft:cauldron[level=3] run function 
 
 execute if entity @e[type=item,nbt={Item:{id:"minecraft:sweet_berries"}},distance=..1] unless entity @s[tag=spirits.SweetBerries] unless entity @s[tag=spirits.Full] run function spirits:ingredients/sweet_berries
 execute if entity @e[type=item,nbt={Item:{id:"minecraft:honey_bottle"}},distance=..1] unless entity @s[tag=spirits.Honey] unless entity @s[tag=spirits.Full] run function spirits:ingredients/honey
+execute if entity @e[type=item,nbt={Item:{id:"minecraft:apple"}},distance=..1] unless entity @s[tag=spirits.Apple] unless entity @s[tag=spirits.Full] run function spirits:ingredients/apple
 
 # Execute time-sensitive processes
 
