@@ -10,9 +10,9 @@ _Spirits_ introduces, you guessed it, spirits, into your Minecraft world. No, I 
 
 1. Add a `mcfunction` file (named after the ingredient you want to add), inside the folder `data/spirits/ingredients/`.
 2. The function should:
-  - Remove the item entity thrown into the cauldron
-  - Add an ingredient tag to `@s`
-  - Trigger the `spirits:cauldron/events/ingredient_added` callback function
+    - Remove the item entity thrown into the cauldron
+    - Add an ingredient tag to `@s`
+    - Trigger the `spirits:cauldron/events/ingredient_added` callback function
 
 Edit the item ID and tag accordingly:
 
@@ -33,9 +33,9 @@ execute if entity @e[type=item,nbt={Item:{id:"minecraft:yourItemId"}},distance=.
 1. Create the necessary ingredients (cf above)
 2. Add a `mcfunction` file (named after your recipe), inside the folder `data/spirits/process/`
 3. The function is called whenever all ingredients have been added to the cauldron. It should:
-  - (Ideally) Log the recipe name for debug purposes
-  - Tag the cauldron entity with your recipe
-  - Start its custom processing logic. The following example sets the fermentation time, and starts the fermentation.
+    - (Ideally) Log the recipe name for debug purposes
+    - Tag the cauldron entity with your recipe
+    - Start its custom processing logic. The following example sets the fermentation time, and starts the fermentation.
 
 ```
 tellraw @a[tag=spirits.Debug] "Identified YourRecipeName ingredients"
@@ -47,9 +47,9 @@ function spirits:cauldron/events/fermentation_started
 
 4. Add a `mcfunction` file (named after your end product), inside the folder `data/spirits/products/`
 5. The function is called when the end product is collected. Its responsability is to spawn the product. It should:
-  - (Ideally) Log the product name for debug purposes
-  - Summon the item for the player to pick up
-  - Tag the cauldron entity as `spirits.Collected` so the clearing callback is triggered.
+    - (Ideally) Log the product name for debug purposes
+    - Summon the item for the player to pick up
+    - Tag the cauldron entity as `spirits.Collected` so the clearing callback is triggered.
 
 ```
 tellraw @a[tag=spirits.Debug] "Identified fermented cyser"
