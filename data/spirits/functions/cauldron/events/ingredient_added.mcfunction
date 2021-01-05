@@ -2,7 +2,7 @@ tellraw @a[tag=spirits.Debug] "Ingredient added"
 
 execute if entity @s[tag=spirits.Ingredients.2] run tag @s add spirits.Ingredients.3
 execute if entity @s[tag=spirits.Ingredients.1] run tag @s add spirits.Ingredients.2
-execute if entity @s[tag=spirits.Ingredients.0] run tag @s add spirits.Ingredients.0
+execute if entity @s[tag=spirits.Ingredients.0] run tag @s add spirits.Ingredients.1
 
 execute if entity @s[tag=spirits.Ingredients.3] run function spirits:cauldron/events/full
 
